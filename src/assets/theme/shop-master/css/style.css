@@ -479,6 +479,27 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+.fh5co-cover.fh5co-cover-ss {
+  height: 300px;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover.fh5co-cover-ss{
+    height: 200px;
+  }
+}
+.fh5co-cover.fh5co-cover-ss .display-t,
+.fh5co-cover.fh5co-cover-ss .display-tc {
+  height: 300px;
+  display: table;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-cover.fh5co-cover-ss .display-t,
+  .fh5co-cover.fh5co-cover-ss .display-tc {
+    height: 200px;
+  }
+}
+
 .about-content {
   margin-bottom: 7em;
 }

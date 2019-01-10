@@ -33,6 +33,7 @@
               "src/assets/theme/shop-master/css/flexslider.css",
               "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
               "node_modules/owl.carousel/dist/assets/owl.theme.default.css",
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/assets/theme/shop-master/css/style.css",
               "src/styles.scss"
             ],
@@ -46,6 +47,7 @@
               "src/assets/theme/shop-master/js/respond.min.js",
               "src/assets/theme/shop-master/js/jquery.waypoints.min.js",
               "node_modules/owl.carousel/dist/owl.carousel.min.js",
+              "node_modules/hammerjs/hammer.min.js",
               "src/assets/theme/shop-master/js/main.js"
             ]
           },
