@@ -1224,10 +1224,10 @@ h1, h2, h3, h4, h5, h6, figure {
   transform: translateX(0px);
 }
 #fh5co-offcanvas a {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffc107;
 }
 #fh5co-offcanvas a:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ff9d00;
 }
 #fh5co-offcanvas ul {
   padding: 0;
