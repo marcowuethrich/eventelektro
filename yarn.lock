@@ -626,6 +626,13 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
+angular-dropdown@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/angular-dropdown/-/angular-dropdown-0.5.0.tgz#8e2558d7fd0357651a5e771b3b15265999ddfb43"
+  integrity sha512-BZ0NvQQyoUlb4vAXE5yi1eaAT9WLcN3naTvSAJPCZ1LDk6A67KxEH8iKGO2D0M/Yk81ub809+wnce2/TWTPzNA==
+  dependencies:
+    tslib "^1.9.0"
+
 angular@^1.7.5:
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.5.tgz#d1c1c01c6f5dc835638f3f9aa51012857bdac49e"
@@ -4660,6 +4667,13 @@ ng-animate@^0.3.4:
   dependencies:
     tslib "^1.9.0"
 
+ng-wormhole@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/ng-wormhole/-/ng-wormhole-3.0.1.tgz#ed5b5e5232bee8efc46debab1902a3e173ac8f67"
+  integrity sha512-/3YNXLozzqfLbUQsV8UBf7JFEz6oiK894ffq3FN+cbt17HcP6B5BWbhQ8P6dHkZRdeYN1j637rufOmC55I9pqA==
+  dependencies:
+    tslib "^1.9.0"
+
 ngx-gallery@^5.9.1:
   version "5.9.1"
   resolved "https://registry.yarnpkg.com/ngx-gallery/-/ngx-gallery-5.9.1.tgz#c56cd21346298931c71273356ebc6e1e5466c223"
@@ -5312,6 +5326,11 @@ pkg-dir@^3.0.0:
   integrity sha512-/E57AYkoeQ25qkxMj5PBOVgF8Kiu/h7cYS30Z5+R7WaiCCBfLq58ZI/dSeaEKb9WVJV5n/03QwrN3IeWIFllvw==
   dependencies:
     find-up "^3.0.0"
+
+popper.js@^1.0.2, popper.js@^1.14.6:
+  version "1.14.6"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.6.tgz#ab20dd4edf9288b8b3b6531c47c361107b60b4b0"
+  integrity sha512-AGwHGQBKumlk/MDfrSOf0JHhJCImdDMcGNoqKmKkU+68GFazv3CQ6q9r7Ja1sKDZmYWTckY/uLyEznheTDycnA==
 
 portfinder@1.0.17:
   version "1.0.17"
@@ -6831,6 +6850,13 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+tooltip.js@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/tooltip.js/-/tooltip.js-1.3.1.tgz#f14f18e4ec119c9be198d460db577969e0dc0806"
+  integrity sha512-nZQGUM3YfjUlCVw3+RqYcCubIDj5NmtPsQ6Xj1NZvii1KSnPxuQ9d6xvNgsNmsmilwhNcBOmHLhwuSDVYINm0g==
+  dependencies:
+    popper.js "^1.0.2"
 
 tough-cookie@~2.4.3:
   version "2.4.3"
