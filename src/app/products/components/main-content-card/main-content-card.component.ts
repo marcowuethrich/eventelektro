@@ -20,6 +20,7 @@ export class MainContentCardComponent implements OnInit {
   products: Product[];
   results: Product[];
   totalSearchResults: Number = 0;
+  p: any; // Needed or prod build
 
   constructor(private productService: ProductService) { }
 
