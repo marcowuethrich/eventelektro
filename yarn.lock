@@ -4672,6 +4672,11 @@ ngx-gallery@^5.9.1:
   resolved "https://registry.yarnpkg.com/ngx-gallery/-/ngx-gallery-5.9.1.tgz#c56cd21346298931c71273356ebc6e1e5466c223"
   integrity sha512-T9nPI+8TwQ5huQvPnptp0FwXJrLcAIjmtenOHZulFMkKfai3LBt3zhWRazoL706ywhs+JKIvOY+4lzpBOQ0n3g==
 
+ngx-pagination@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/ngx-pagination/-/ngx-pagination-3.2.1.tgz#d82fe15b03a628621dabb835ebc90011f2557689"
+  integrity sha512-+dprQkYoiNYDZkNAe/1HX0wDFbwCTE31mC2bEQVdI7ZbjEIvGB7R3zp5QoCKgz6cPFatUj4Iw6Ukqp5zx0oT/Q==
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"

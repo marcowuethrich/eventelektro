@@ -10,6 +10,8 @@ import { group } from '@angular/animations';
 })
 export class MainContentCardComponent implements OnInit {
 
+  DROPDOWN_PLACEHOLDER = '-';
+
   categories = [];
   groups = [];
   selectedCategory: string;
@@ -17,6 +19,7 @@ export class MainContentCardComponent implements OnInit {
   csvAsString: string;
   products: Product[];
   results: Product[];
+  totalSearchResults: Number = 0;
 
   constructor(private productService: ProductService) { }
 
@@ -34,15 +37,14 @@ export class MainContentCardComponent implements OnInit {
     this.initCategoryFilter();
     this.initGroupFilter();
 
-    //Todo remove this or set anything
-    this.onCategoryFilterSelect(this.categories[0]);
-    this.onGroupFilterSelect(this.groups[0]);
+    // Show all Product on start
+    this.results = this.products;
   }
 
   initCategoryFilter() {
     var categories = Array.from(new Set(this.products.map(prod => prod.category)));
     categories.sort;
-    this.categories.push('-')
+    this.categories.push(this.DROPDOWN_PLACEHOLDER)
     categories.forEach(cat => this.categories.push(cat));
     this.selectedCategory = this.categories[0]
   }
@@ -50,18 +52,24 @@ export class MainContentCardComponent implements OnInit {
   initGroupFilter() {
     var groups = Array.from(new Set(this.products.filter(prod => prod.category === this.selectedCategory).map(prod => prod.group)))
     groups.sort;
-    this.groups.push('-')
+    this.groups.push(this.DROPDOWN_PLACEHOLDER)
     groups.forEach(group => this.groups.push(group));
   }
 
   onCategoryFilterSelect(category: any) {
     this.selectedCategory = category;
-    this.results = this.products.filter(prod => prod.category === category);
+
     // Reset Group if Group was selected
-    if (this.selectedGroup !== '-') {
-      this.selectedGroup = '-';
+    if (this.selectedGroup !== this.DROPDOWN_PLACEHOLDER) {
+      this.selectedGroup = this.DROPDOWN_PLACEHOLDER;
     }
 
+    if (category === this.DROPDOWN_PLACEHOLDER) {
+      this.results = this.products;
+    } else {
+      this.results = this.products.filter(prod => prod.category === category);
+    }
+    // Is undifinde on inital start up
     var catNr: string;
     try {
       catNr = this.results[0].categoryNr;
@@ -70,18 +78,21 @@ export class MainContentCardComponent implements OnInit {
     }
 
     var groups = [];
-    groups.push('-');
+    groups.push(this.DROPDOWN_PLACEHOLDER);
     Array.from(new Set(this.products
       .filter(prod => prod.categoryNr === catNr)
       .map(prod => prod.group)))
       .forEach(prod => groups.push(prod));
-    console.log(groups)
     this.groups = groups;
   }
 
   onGroupFilterSelect(group: any) {
     this.selectedGroup = group;
-    this.results = this.products.filter(prod => (prod.category === this.selectedCategory && prod.group === group));
+    if (group === this.DROPDOWN_PLACEHOLDER) {
+      this.results = this.products.filter(prod => (prod.category === this.selectedCategory));
+    } else {
+      this.results = this.products.filter(prod => (prod.category === this.selectedCategory && prod.group === group));
+    }
   }
 
   isListEmpty() {
@@ -90,6 +101,25 @@ export class MainContentCardComponent implements OnInit {
     } catch{
       return false;
     }
+  }
+
+  getTotalSearchResults() {
+    try {
+      return this.results.length;
+    } catch{
+      return 0;
+    }
+  }
+
+  getTotalKategories() {
+    return this.categories.length - 1;
+  }
+
+  getTotalGroups() {
+    if (this.selectedCategory === this.DROPDOWN_PLACEHOLDER) {
+      return Array.from(new Set(this.products.map(prod => prod.group))).length;
+    }
+    return this.groups.length - 1;
   }
 
 }

@@ -3,13 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { ProductsComponent } from './products.component';
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductRoutingModule } from './products-routing-module';
-import { MainContentCardComponent } from './components/main-content-card/main-content-card.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/product-service';
+import { MainContentCardComponent } from './components/main-content-card/main-content-card.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,9 @@ import { ProductService } from './services/product-service';
     CommonModule,
     ProductRoutingModule,
     FormsModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    NgxPaginationModule
+    ],
   providers: [ProductService]
 })
 export class ProductsModule { }

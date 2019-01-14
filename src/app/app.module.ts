@@ -11,7 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ConditionsComponent } from './conditions/conditions.component';
 import { ImagesComponent } from './images/images.component';
 import { GalleryModule, GALLERY_CONFIG } from '@ngx-gallery/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './products/products.module';
 
 @NgModule({
