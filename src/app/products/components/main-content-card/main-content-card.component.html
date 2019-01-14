@@ -19,36 +19,43 @@
     <br />
     <hr class="filter-separator">
     <div class="row">
-      <div class="col-3 filter-txt">
+      <div class="col-4 filter-txt">
         <a>Begrenze die Suche</a>
       </div>
-      <div class="col-4">
-        <a class="filter-txt-right">Kategorie:</a>
-        <div class="dropdown">
-          <div class="dropdown-btn"><span>{{selectedCategory}}</span></div>
-          <div class="dropdown-content">
-            <div *ngFor="let cat of categories">
-              <p>{{cat}}</p>
-            </div>
+      <div class="col-4 filter-txt">
+        <div class="">
+          <a class="filter-txt-right">Kategorie:</a>
+          <div class="select-wrapper">
+            <select div="product-select" (change)="onCategoryFilterSelect($event.target.value)">
+
+              <option *ngFor="let cat of categories">
+                {{cat}}
+              </option>
+            </select>
           </div>
         </div>
       </div>
-      <div class="col-4">
-        <a class="filter-txt-right">Gruppe:</a>
-        <div class="dropdown">
-          <div class="dropdown-btn"><span>{{selectedGroup}}</span></div>
-          <div class="dropdown-content">
-            <div *ngFor="let group of groups">
-              <p>{{group}}</p>
-            </div>
+      <div class="col-4 filter-txt">
+        <div class="">
+          <a class="filter-txt-right">Gruppe:</a>
+          <div class="select-wrapper">
+            <select div="product-select" (change)="onGroupFilterSelect($event.target.value)">
+              <option *ngFor="let group of groups">
+                {{group}}
+              </option>
+            </select>
           </div>
         </div>
       </div>
     </div>
     <hr class="filter-separator">
-    <br/>
+    <br />
 
-    <app-product-card *ngFor="let product of products"
-    [product]="product"></app-product-card>
+    <div class="row" *ngIf="isListEmpty()">
+      <div class="col-12 no-data-found">
+        Ups, momentan konnten keine Produkte gefunden werden.
+      </div>
+    </div>
+    <app-product-card *ngFor="let product of results" [product]="product"></app-product-card>
   </div>
 </header>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product-service';
 import { Product } from '../../models/product';
+import { group } from '@angular/animations';
 
 @Component({
   selector: 'app-main-content-card',
@@ -29,15 +30,66 @@ export class MainContentCardComponent implements OnInit {
     this.initSearch();
   }
 
-  initSearch(){
-    this.categories = Array.from(new Set(this.products.map(prod => prod.category)));
-    this.groups = Array.from(new Set(this.products.map(prod => prod.group)));
-       
-    this.categories.sort;
-    this.groups.sort;
+  initSearch() {
+    this.initCategoryFilter();
+    this.initGroupFilter();
 
-    this.selectedCategory = this.categories[0];
-    this.selectedGroup = this.groups[0];
+    //Todo remove this or set anything
+    this.onCategoryFilterSelect(this.categories[0]);
+    this.onGroupFilterSelect(this.groups[0]);
+  }
+
+  initCategoryFilter() {
+    var categories = Array.from(new Set(this.products.map(prod => prod.category)));
+    categories.sort;
+    this.categories.push('-')
+    categories.forEach(cat => this.categories.push(cat));
+    this.selectedCategory = this.categories[0]
+  }
+
+  initGroupFilter() {
+    var groups = Array.from(new Set(this.products.filter(prod => prod.category === this.selectedCategory).map(prod => prod.group)))
+    groups.sort;
+    this.groups.push('-')
+    groups.forEach(group => this.groups.push(group));
+  }
+
+  onCategoryFilterSelect(category: any) {
+    this.selectedCategory = category;
+    this.results = this.products.filter(prod => prod.category === category);
+    // Reset Group if Group was selected
+    if (this.selectedGroup !== '-') {
+      this.selectedGroup = '-';
+    }
+
+    var catNr: string;
+    try {
+      catNr = this.results[0].categoryNr;
+    } catch{
+      catNr = '00';
+    }
+
+    var groups = [];
+    groups.push('-');
+    Array.from(new Set(this.products
+      .filter(prod => prod.categoryNr === catNr)
+      .map(prod => prod.group)))
+      .forEach(prod => groups.push(prod));
+    console.log(groups)
+    this.groups = groups;
+  }
+
+  onGroupFilterSelect(group: any) {
+    this.selectedGroup = group;
+    this.results = this.products.filter(prod => (prod.category === this.selectedCategory && prod.group === group));
+  }
+
+  isListEmpty() {
+    try {
+      return this.results.length == 0 ? true : false;
+    } catch{
+      return false;
+    }
   }
 
 }
