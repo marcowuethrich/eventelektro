@@ -626,13 +626,6 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
-angular-dropdown@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/angular-dropdown/-/angular-dropdown-0.5.0.tgz#8e2558d7fd0357651a5e771b3b15265999ddfb43"
-  integrity sha512-BZ0NvQQyoUlb4vAXE5yi1eaAT9WLcN3naTvSAJPCZ1LDk6A67KxEH8iKGO2D0M/Yk81ub809+wnce2/TWTPzNA==
-  dependencies:
-    tslib "^1.9.0"
-
 angular@^1.7.5:
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.5.tgz#d1c1c01c6f5dc835638f3f9aa51012857bdac49e"

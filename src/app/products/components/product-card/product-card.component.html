@@ -4,36 +4,36 @@
 
     <!-- Image -->
     <div class="col-lg-4 product-card-image-box">
-      <img class="product-card-img" src="assets/images/products/notleuchte-min.jpg" alt="notleuchte-min.jpg" />
+      <img class="product-card-img" [src]="imagePath" [alt]="product.name" />
     </div>
 
     <!-- Detail -->
     <div class="col-lg-8 ">
       <div class="product-card-title">
-        <a><strong>Fluchtwegleuchten ws - Schachtel mit Piktogrammen</strong></a>
+        <a><strong>{{product.name}}</strong></a>
       </div>
       <div class="table-responsive">
         <table class="table product-card-detail-table">
           <tbody>
             <tr>
               <th scope="row">Zuordnung:</th>
-              <td>Adapter > Steckdose</td>
+              <td>{{product.category}} > {{product.group}}</td>
             </tr>
             <tr>
               <th scope="row">Artikelnummer:</th>
-              <td>01-02-000001</td>
+              <td>{{product.code}}</td>
             </tr>
             <tr>
               <th scope="row">Mietpreis:</th>
-              <td>CHF 20.-/ Tag</td>
+              <td>{{product.rentPrice}}</td>
             </tr>
             <tr>
               <th scope="row">Neupreis:</th>
-              <td>CHF 300.-</td>
+              <td>{{product.newPrice}}</td>
             </tr>
             <tr>
               <th scope="row">Verfügbar:</th>
-              <td>5 Stk.</td>
+              <td>{{product.number}} Stk.</td>
             </tr>
           </tbody>
         </table>

@@ -8,6 +8,8 @@ import { ProductsComponent } from './products.component';
 import { ProductRoutingModule } from './products-routing-module';
 import { MainContentCardComponent } from './components/main-content-card/main-content-card.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './services/product-service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ProductCardComponent } from './components/product-card/product-card.com
   imports: [
     CommonModule,
     ProductRoutingModule,
-    FormsModule
-  ]
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [ProductService]
 })
 export class ProductsModule { }

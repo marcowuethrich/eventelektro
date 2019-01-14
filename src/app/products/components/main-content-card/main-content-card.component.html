@@ -1,4 +1,4 @@
-<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(assets/images/slider/IMG_3328-min.JPG);">
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-ss" role="banner" style="background-image:url(assets/images/slider/IMG_3328-min.JPG);">
   <div class="overlay"></div>
   <div class="container">
     <div class="row justify-content-md-center">
@@ -14,42 +14,21 @@
   </div>
 </header>
 
-<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-color:grey;">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-12 text-center">
-        <div class="display-t">
-          <div class="display-tc animated fadeIn">
-            <h2>Coming Soon...</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
 <header class="product-list-card">
   <div class="container">
     <br />
     <hr class="filter-separator">
     <div class="row">
-      <div class="col-3">
-        <a class="filter-txt">Grenze die Suche ein</a>
+      <div class="col-3 filter-txt">
+        <a>Begrenze die Suche</a>
       </div>
       <div class="col-4">
         <a class="filter-txt-right">Kategorie:</a>
         <div class="dropdown">
-          <div class="dropdown-btn"><span>Adapter</span></div>
+          <div class="dropdown-btn"><span>{{selectedCategory}}</span></div>
           <div class="dropdown-content">
-            <div>
-              <p>Adapter</p>
-            </div>
-            <div>
-              <p>EDV</p>
-            </div>
-            <div>
-              <p>Licht</p>
+            <div *ngFor="let cat of categories">
+              <p>{{cat}}</p>
             </div>
           </div>
         </div>
@@ -57,16 +36,10 @@
       <div class="col-4">
         <a class="filter-txt-right">Gruppe:</a>
         <div class="dropdown">
-          <div class="dropdown-btn"><span>Kupplung</span></div>
+          <div class="dropdown-btn"><span>{{selectedGroup}}</span></div>
           <div class="dropdown-content">
-            <div>
-              <p>Kupplung</p>
-            </div>
-            <div>
-              <p>Schukkostecker</p>
-            </div>
-            <div>
-              <p>Stecker</p>
+            <div *ngFor="let group of groups">
+              <p>{{group}}</p>
             </div>
           </div>
         </div>
@@ -75,7 +48,7 @@
     <hr class="filter-separator">
     <br/>
 
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
+    <app-product-card *ngFor="let product of products"
+    [product]="product"></app-product-card>
   </div>
 </header>
