@@ -11,8 +11,9 @@ import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { ConditionsComponent } from './conditions/conditions.component';
 import { ImagesComponent } from './images/images.component';
-import { GalleryModule, GALLERY_CONFIG } from '@ngx-gallery/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Angular2ImageGalleryModule } from 'angular2-image-gallery'
+
 
 @NgModule({
   declarations: [
@@ -29,18 +30,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GalleryModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    Angular2ImageGalleryModule
   ],
-  providers: [
-    {
-      provide: GALLERY_CONFIG,
-      useValue: {
-        dots: true,
-        imageSize: 'cover'
-      }
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

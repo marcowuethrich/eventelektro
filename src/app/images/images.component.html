@@ -13,14 +13,28 @@
     </div>
   </div>
 </header>
-<div id="fh5co-about">
-  <div class="overlay"></div>
+
+<section>
   <div class="container">
-    <h2 class="text-center">Sommer Never Ends - Rona GR</h2>
-    <div class="row justify-content-md-center">
-      <div class="col-12">
-        <gallery [items]="images" thumbPosition="left"></gallery>
+    <div id="gallary-tabs">
+      <h6 class="section-title h1">Bildergalerie</h6>
+      <div class="row">
+        <div class="col-12">
+          <nav>
+            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-snef-tab" data-toggle="tab" href="#nav-snef" role="tab"
+                aria-controls="nav-snef" aria-selected="true">Sommer Never Ends - Rona GR</a>
+            </div>
+          </nav>
+          <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-snef" role="tabpanel" aria-labelledby="nav-snef-tab">
+              <gallery [flexBorderSize]="2" [flexImageSize]="7" [metadataUri]="'assets/images/gallery/snef/data.json'"
+                [maxRowsPerPage]="20">
+              </gallery>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
