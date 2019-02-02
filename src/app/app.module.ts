@@ -13,6 +13,7 @@ import { ConditionsComponent } from './conditions/conditions.component';
 import { ImagesComponent } from './images/images.component';
 import { GalleryModule, GALLERY_CONFIG } from '@ngx-gallery/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     GalleryModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LazyLoadImageModule
   ],
   providers: [
     {
