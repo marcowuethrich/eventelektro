@@ -1,0 +1,44 @@
+<div class="product-card">
+
+  <div class="row">
+
+    <!-- Image -->
+    <div class="col-lg-4 product-card-image-box">
+      <img class="product-card-img" [src]="imagePath" [alt]="product.name" />
+    </div>
+
+    <!-- Detail -->
+    <div class="col-lg-8 ">
+      <div class="product-card-title">
+        <a><strong>{{product.name}}</strong></a>
+      </div>
+      <div class="table-responsive">
+        <table class="table product-card-detail-table">
+          <tbody>
+            <tr>
+              <th scope="row">Zuordnung:</th>
+              <td>{{product.category}} > {{product.group}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Artikelnummer:</th>
+              <td>{{product.code}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Mietpreis:</th>
+              <td>{{product.rentPrice}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Neupreis:</th>
+              <td>{{product.newPrice}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Verfügbar:</th>
+              <td>{{product.number}} Stk.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <hr class="product-card-separator">
+</div>

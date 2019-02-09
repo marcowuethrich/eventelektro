@@ -7,13 +7,13 @@ import { NavComponent } from './nav/nav.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { ConditionsComponent } from './conditions/conditions.component';
 import { ImagesComponent } from './images/images.component';
+import { GalleryModule, GALLERY_CONFIG } from '@ngx-gallery/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductsModule } from './products/products.module';
 import { Angular2ImageGalleryModule } from 'angular2-image-gallery'
-
 
 @NgModule({
   declarations: [
@@ -22,7 +22,6 @@ import { Angular2ImageGalleryModule } from 'angular2-image-gallery'
     ContactComponent,
     AboutComponent,
     HomeComponent,
-    ProductsComponent,
     FooterComponent,
     ConditionsComponent,
     ImagesComponent,
@@ -30,8 +29,19 @@ import { Angular2ImageGalleryModule } from 'angular2-image-gallery'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    GalleryModule,
     BrowserAnimationsModule,
+    ProductsModule,
     Angular2ImageGalleryModule
+  ],
+  providers: [
+    {
+      provide: GALLERY_CONFIG,
+      useValue: {
+        dots: true,
+        imageSize: 'cover'
+      }
+    }
   ],
   providers: [],
   bootstrap: [AppComponent]
