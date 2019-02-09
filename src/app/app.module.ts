@@ -13,6 +13,7 @@ import { ImagesComponent } from './images/images.component';
 import { GalleryModule, GALLERY_CONFIG } from '@ngx-gallery/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './products/products.module';
+import { Angular2ImageGalleryModule } from 'angular2-image-gallery'
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ProductsModule } from './products/products.module';
     GalleryModule,
     BrowserAnimationsModule,
     ProductsModule,
+    Angular2ImageGalleryModule
   ],
   providers: [
     {
@@ -41,6 +43,7 @@ import { ProductsModule } from './products/products.module';
       }
     }
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GalleryItem, ImageItem } from '@ngx-gallery/core';
 
 @Component({
   selector: 'app-images',
@@ -8,7 +7,6 @@ import { GalleryItem, ImageItem } from '@ngx-gallery/core';
 })
 export class ImagesComponent implements OnInit {
 
-  images: GalleryItem[];
   SNEF_PATH: string = 'assets/images/gallery/SNEF/';
   // Is there a better solution so get the file names, without a backend?
   imageNames = [
@@ -41,11 +39,7 @@ export class ImagesComponent implements OnInit {
   }
 
   initGallery(names) {
-    var items = [];
-    for (let name of names) {
-      items[items.length] = new ImageItem({ src: this.SNEF_PATH + name, thumb: this.SNEF_PATH + name })
-    }
-    this.images = items;
+   
   }
 
 }
