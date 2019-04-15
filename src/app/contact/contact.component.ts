@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ToastrService} from "ngx-toastr";
-import {el} from "@angular/platform-browser/testing/src/browser_util";
+import {ContactService} from "./contact.service";
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +15,7 @@ export class ContactComponent implements OnInit {
   subject: string = '';
   content: string = '';
 
-  constructor(private toastr: ToastrService) {
+  constructor(private toastr: ToastrService, private contactService: ContactService) {
   }
 
   ngOnInit() {
@@ -23,8 +23,8 @@ export class ContactComponent implements OnInit {
 
   sendMail() {
     if (this.inputValid()) {
-      //TODO Send Mail
-      this.showSuccessToast();
+      this.contactService.sendMail(this.firstname, this.lastname, this.email, this.subject, this.content);
+      this.toastr.success('Wurde erfolgreich versant', 'E-Mail');
       this.clearInputs();
     }
   }
@@ -54,13 +54,5 @@ export class ContactComponent implements OnInit {
     this.email = '';
     this.subject = '';
     this.content = '';
-  }
-
-  showSuccessToast() {
-    this.toastr.success('E-Mail', 'Wurde erfolgreich versant');
-  }
-
-  showErrorToast() {
-    this.toastr.error('E-Mail', 'Konnte nicht versented werden!');
   }
 }

@@ -39,13 +39,13 @@
             <div class="col-md-6">
               <!-- <label for="fname">First Name</label> -->
               <input type="text" class="form-control" placeholder="Dein Vorname"
-                     required minlength="3" maxlength="24"
+                     required minlength="3" maxlength="64"
                      [(ngModel)]="firstname" name="firstname" id="firstname">
             </div>
             <div class="col-md-6">
               <!-- <label for="lname">Last Name</label> -->
               <input type="text" class="form-control" placeholder="Dein Nachname"
-                     required minlength="3" maxlength="24"
+                     required minlength="3" maxlength="64"
                      [(ngModel)]="lastname" name="lastname" id="lastname">
             </div>
           </div>
@@ -54,7 +54,7 @@
             <div class="col-md-12">
               <!-- <label for="email">Email</label> -->
               <input type="email" class="form-control" placeholder="Deine E-Mail Adresse"
-                     required minlength="5" maxlength="24"
+                     required minlength="5" maxlength="64"
                      [(ngModel)]="email" name="email" id="email">
             </div>
           </div>
@@ -63,16 +63,16 @@
             <div class="col-md-12">
               <!-- <label for="subject">Subject</label> -->
               <input type="text" id="subject" class="form-control" placeholder="Dein Thema deiner Mitteilung"
-                     [(ngModel)]="subject" name="subject" required minlength="2" maxlength="24">
+                     [(ngModel)]="subject" name="subject" required minlength="2" maxlength="128">
             </div>
           </div>
 
           <div class="row form-group">
             <div class="col-md-12">
               <!-- <label for="message">Message</label> -->
-              <textarea cols="30" rows="10" class="form-control"
+              <textarea cols="30" rows="10" class="form-control" type="text"
                         placeholder="Was möchtest du uns mitteilen..."
-                        required minlength="5" maxlength="120"
+                        required minlength="5" maxlength="1248"
                         [(ngModel)]="content" name="content" id="content"></textarea>
             </div>
           </div>
