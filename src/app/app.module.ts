@@ -13,6 +13,8 @@ import { ImagesComponent } from './images/images.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './products/products.module';
 import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
+import {ToastrModule} from "ngx-toastr";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,8 +31,10 @@ import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     ProductsModule,
-    Angular2ImageGalleryModule
+    Angular2ImageGalleryModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
