@@ -19,7 +19,7 @@ export class ProductCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  private getImagePath(product: Product) {
+  getImagePath(product: Product) {
     try {
       return "assets/products/images/" + product.imagePath;
     } catch {
@@ -27,7 +27,7 @@ export class ProductCardComponent implements OnInit {
     }
   }
 
-  private getProductName(product: Product) {
+  getProductName(product: Product) {
     if (this.indicatorExist(product.name)) {
       return product.name.substr(1, product.name.length);
     }else return `${product.group} - ${product.name}`
@@ -37,7 +37,7 @@ export class ProductCardComponent implements OnInit {
     return txt[0] === this.withoutGroupNameIndicator;
   }
 
-  private documentsExist(product: Product) {
+  documentsExist(product: Product) {
     return product.pdfName != null && product.pdfName.length > 2;
   }
 
@@ -45,7 +45,7 @@ export class ProductCardComponent implements OnInit {
     return `assets/products/docs/${product.pdfName}`
   }
 
-  private getDocName(product: Product) {
+  getDocName(product: Product) {
     return `doc_${product.pdfName}`
   }
 
