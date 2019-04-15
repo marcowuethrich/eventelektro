@@ -8,6 +8,6 @@ export class Product {
     public number: string;
     public rentPrice: string;
     public imagePath: string;
-    public pdfPath: string;
+    public pdfName: string;
   }
   

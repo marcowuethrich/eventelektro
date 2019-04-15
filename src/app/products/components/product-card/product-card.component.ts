@@ -1,7 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Product} from '../../models/product';
 import {ProductsConst} from "../../products.const";
-import {el} from "@angular/platform-browser/testing/src/browser_util";
 
 @Component({
   selector: 'app-product-card',
@@ -22,13 +21,13 @@ export class ProductCardComponent implements OnInit {
 
   private getImagePath(product: Product) {
     try {
-      return "assets/images/products/" + product.imagePath;
+      return "assets/products/images/" + product.imagePath;
     } catch {
       return "assets/images/404_not_found.jpg";
     }
   }
 
-  getProductName(product: Product) {
+  private getProductName(product: Product) {
     if (this.indicatorExist(product.name)) {
       return product.name.substr(1, product.name.length);
     }else return `${product.group} - ${product.name}`
@@ -36,5 +35,23 @@ export class ProductCardComponent implements OnInit {
 
   private indicatorExist(txt: string) {
     return txt[0] === this.withoutGroupNameIndicator;
+  }
+
+  private documentsExist(product: Product) {
+    return product.pdfName != null && product.pdfName.length > 2;
+  }
+
+  getDocPath(product: Product) {
+    return `assets/products/docs/${product.pdfName}`
+  }
+
+  private getDocName(product: Product) {
+    return `doc_${product.pdfName}`
+  }
+
+  getRentPrice(product: Product) {
+    if (product.rentPrice === '0' || product.rentPrice === '0.00')
+      return `Auf Anfrage`;
+    return product.rentPrice;
   }
 }

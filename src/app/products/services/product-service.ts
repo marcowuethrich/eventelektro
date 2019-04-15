@@ -25,9 +25,13 @@ export class ProductService {
     const lines: string [] = txt.split(/\r\n|\r|\n/);
 
     const start: number = this.columnHeaderExist ? 1 : 0;
+
     for (var i = start; i < lines.length; i++) {
       const line: string = lines[i];
       const lineArray = line.split(this.csvSeparator);
+      if (lineArray[1] == undefined)
+        break;
+
       const product = new Product();
       product.name = lineArray[1];
       product.categoryNr = lineArray[2];
@@ -38,7 +42,7 @@ export class ProductService {
       product.number = lineArray[7];
       product.rentPrice = lineArray[8];
       product.imagePath = lineArray[9];
-      product.pdfPath = lineArray[10];
+      product.pdfName = lineArray[10];
 
       products.push(product);
     }

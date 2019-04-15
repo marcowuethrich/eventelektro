@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product-service';
-import { Product } from '../../models/product';
-import { group } from '@angular/animations';
+import {Component, OnInit} from '@angular/core';
+import {ProductService} from '../../services/product-service';
+import {Product} from '../../models/product';
 
 @Component({
   selector: 'app-main-content-card',
@@ -22,7 +21,8 @@ export class MainContentCardComponent implements OnInit {
   totalSearchResults: Number = 0;
   p: any; // Needed or prod build
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService) {
+  }
 
   ngOnInit() {
     this.productService.getProducts()
@@ -43,17 +43,22 @@ export class MainContentCardComponent implements OnInit {
   }
 
   initCategoryFilter() {
-    var categories = Array.from(new Set(this.products.map(prod => prod.category)));
+    console.log(this.products);
+    const categories = Array.from(new Set(this.products.map(prod => prod.category)));
+    console.log(categories);
     categories.sort;
-    this.categories.push(this.DROPDOWN_PLACEHOLDER)
+    this.categories.push(this.DROPDOWN_PLACEHOLDER);
     categories.forEach(cat => this.categories.push(cat));
-    this.selectedCategory = this.categories[0]
+    this.selectedCategory = this.categories[0];
+    console.log(categories);
   }
 
   initGroupFilter() {
-    var groups = Array.from(new Set(this.products.filter(prod => prod.category === this.selectedCategory).map(prod => prod.group)))
+    const groups = Array.from(new Set(this.products
+      .filter(prod => prod.category === this.selectedCategory)
+      .map(prod => prod.group)));
     groups.sort;
-    this.groups.push(this.DROPDOWN_PLACEHOLDER)
+    this.groups.push(this.DROPDOWN_PLACEHOLDER);
     groups.forEach(group => this.groups.push(group));
   }
 
@@ -74,7 +79,7 @@ export class MainContentCardComponent implements OnInit {
     var catNr: string;
     try {
       catNr = this.results[0].categoryNr;
-    } catch{
+    } catch {
       catNr = '00';
     }
 
@@ -99,7 +104,7 @@ export class MainContentCardComponent implements OnInit {
   isListEmpty() {
     try {
       return this.results.length == 0 ? true : false;
-    } catch{
+    } catch {
       return false;
     }
   }
@@ -107,7 +112,7 @@ export class MainContentCardComponent implements OnInit {
   getTotalSearchResults() {
     try {
       return this.results.length;
-    } catch{
+    } catch {
       return 0;
     }
   }

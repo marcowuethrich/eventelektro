@@ -4,7 +4,7 @@
 
     <!-- Image -->
     <div class="col-lg-4 product-card-image-box">
-      <img class="product-card-img" [src]="getImagePath(product)" [alt]="productName" />
+      <img class="product-card-img" [src]="getImagePath(product)" [alt]="getProductName(product)"/>
     </div>
 
     <!-- Detail -->
@@ -15,22 +15,26 @@
       <div class="table-responsive">
         <table class="table product-card-detail-table">
           <tbody>
-            <tr>
-              <th scope="row">Zuordnung:</th>
-              <td>{{product.category}} > {{product.group}}</td>
-            </tr>
-            <tr>
-              <th scope="row">Artikelnummer:</th>
-              <td>{{product.code}}</td>
-            </tr>
-            <tr>
-              <th scope="row">Mietpreis:</th>
-              <td>{{product.rentPrice}}</td>
-            </tr>
-            <tr>
-              <th scope="row">Verfügbar:</th>
-              <td>{{product.number}} Stk.</td>
-            </tr>
+          <tr>
+            <th scope="row">Zuordnung:</th>
+            <td>{{product.category}} > {{product.group}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Artikelnummer:</th>
+            <td>{{product.code}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Mietpreis:</th>
+            <td>{{getRentPrice(product)}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Verfügbar:</th>
+            <td>{{product.number}} Stk.</td>
+          </tr>
+          <tr *ngIf="documentsExist(product)">
+            <th scope="row">Dokumente:</th>
+            <td><a [href]="getDocPath(product)" [download]="getDocName(product)"><i class="fas fa-file-pdf"></i> PDF</a></td>
+          </tr>
           </tbody>
         </table>
       </div>

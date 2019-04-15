@@ -110,13 +110,13 @@ ID;Artikel;hl;Kategorie;hl2;Gruppe;Code;Anzahl;Mietpreis;BilderPath;PdfPath
 109;@Behringer Eurolive B1520 Pro 800W Speaker 2Weg passive;02;Audio;35;Boxen;02-35-109;2;0;pa.jpg;
 110;@PorkoLab Speaker 3Weg passive;02;Audio;35;Boxen;02-35-110;2;0;pa.jpg;
 111;@PorkoLab Subwoofer passive;02;Audio;35;Boxen;02-35-111;4;0;pa.jpg;
-112;@dbx Messmic;02;Audio;09;Audio Equipment;02-09-112;2;0;audio_eq.jpg;dbx_messmic.pdf
-113;@dbx DriveRack PA+;02;Audio;09;Audio Equipment;02-09-113;1;0;audio_eq.jpg;dbx_messmic.pdf
-114;@YAMAHA P5000s;02;Audio;09;Audio Equipment;02-09-114;1;0;audio_eq.jpg;dbx_messmic.pdf
-115;@Powersoft Digam 3000;02;Audio;09;Audio Equipment;02-09-115;1;0;audio_eq.jpg;dbx_messmic.pdf
-116;@Powersoft Digam 5000;02;Audio;09;Audio Equipment;02-09-116;1;0;audio_eq.jpg;dbx_messmic.pdf
-117;@Powersoft Digam 7000;02;Audio;09;Audio Equipment;02-09-117;1;0;audio_eq.jpg;dbx_messmic.pdf
-118;@Behringer Ultradrive Pro;02;Audio;09;Audio Equipment;02-09-118;1;0;audio_eq.jpg;dbx_messmic.pdf
-119;@Behringer Compressor Pro;02;Audio;09;Audio Equipment;02-09-119;1;0;audio_eq.jpg;dbx_messmic.pdf
-120;@Europower EP 2500;02;Audio;09;Audio Equipment;02-09-120;1;0;audio_eq.jpg;dbx_messmic.pdf
-121;@Behringer Eurolive 1800x  Pro 1600W Subwoofer passive;02;Audio;35;Boxen;02-35-121;2;0;pa.jpg;dbx_messmic.pdf
+112;@dbx Messmic;02;Audio;09;Audio Equipment;02-09-112;2;0;audio_eq.jpg;powersoft_digam.pdf
+113;@dbx DriveRack PA+;02;Audio;09;Audio Equipment;02-09-113;1;0;audio_eq.jpg;powersoft_digam.pdf
+114;@YAMAHA P5000s;02;Audio;09;Audio Equipment;02-09-114;1;0;audio_eq.jpg;powersoft_digam.pdf
+115;@Powersoft Digam 3000;02;Audio;09;Audio Equipment;02-09-115;1;0;audio_eq.jpg;powersoft_digam.pdf
+116;@Powersoft Digam 5000;02;Audio;09;Audio Equipment;02-09-116;1;0;audio_eq.jpg;powersoft_digam.pdf
+117;@Powersoft Digam 7000;02;Audio;09;Audio Equipment;02-09-117;1;0;audio_eq.jpg;powersoft_digam.pdf
+118;@Behringer Ultradrive Pro;02;Audio;09;Audio Equipment;02-09-118;1;0;audio_eq.jpg;powersoft_digam.pdf
+119;@Behringer Compressor Pro;02;Audio;09;Audio Equipment;02-09-119;1;0;audio_eq.jpg;powersoft_digam.pdf
+120;@Europower EP 2500;02;Audio;09;Audio Equipment;02-09-120;1;0;audio_eq.jpg;powersoft_digam.pdf
+121;@Behringer Eurolive 1800x  Pro 1600W Subwoofer passive;02;Audio;35;Boxen;02-35-121;2;0;pa.jpg;powersoft_digam.pdf
