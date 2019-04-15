@@ -6,9 +6,8 @@ export class Product {
     public group: string;
     public code: string;
     public number: string;
-    public newPrice: string;
     public rentPrice: string;
     public imagePath: string;
+    public pdfPath: string;
   }
-  
   

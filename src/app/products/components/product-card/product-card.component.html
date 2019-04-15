@@ -4,13 +4,13 @@
 
     <!-- Image -->
     <div class="col-lg-4 product-card-image-box">
-      <img class="product-card-img" [src]="imagePath" [alt]="product.name" />
+      <img class="product-card-img" [src]="getImagePath(product)" [alt]="productName" />
     </div>
 
     <!-- Detail -->
     <div class="col-lg-8 ">
       <div class="product-card-title">
-        <a><strong>{{product.name}}</strong></a>
+        <a><strong>{{getProductName(product)}}</strong></a>
       </div>
       <div class="table-responsive">
         <table class="table product-card-detail-table">
@@ -26,10 +26,6 @@
             <tr>
               <th scope="row">Mietpreis:</th>
               <td>{{product.rentPrice}}</td>
-            </tr>
-            <tr>
-              <th scope="row">Neupreis:</th>
-              <td>{{product.newPrice}}</td>
             </tr>
             <tr>
               <th scope="row">Verfügbar:</th>

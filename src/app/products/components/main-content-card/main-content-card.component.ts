@@ -30,7 +30,7 @@ export class MainContentCardComponent implements OnInit {
   }
 
   loadProducts(csv: string) {
-    this.products = this.productService.convertToProcuts(csv);
+    this.products = this.productService.convertToProducts(csv);
     this.initSearch();
   }
 

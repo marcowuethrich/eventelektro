@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../../models/product';
-import { stringify } from '@angular/core/src/render3/util';
+import {Component, OnInit, Input} from '@angular/core';
+import {Product} from '../../models/product';
+import {ProductsConst} from "../../products.const";
+import {el} from "@angular/platform-browser/testing/src/browser_util";
 
 @Component({
   selector: 'app-product-card',
@@ -10,21 +11,30 @@ import { stringify } from '@angular/core/src/render3/util';
 export class ProductCardComponent implements OnInit {
 
   @Input() product: Product;
+  withoutGroupNameIndicator: string;
 
-  imagePath = this.buildFinalImagePath(this.product);
-
-  constructor() { }
+  constructor() {
+    this.withoutGroupNameIndicator = ProductsConst.WITHOUT_GROUP_NAME_INDICATOR;
+  }
 
   ngOnInit() {
   }
 
-  buildFinalImagePath(product: Product) {
-    var imagePath: string;
-    try{
-      imagePath = "assets/images/products/" + product.imagePath;
-    }catch{
-      imagePath = "assets/images/404_not_found.jpg";
+  private getImagePath(product: Product) {
+    try {
+      return "assets/images/products/" + product.imagePath;
+    } catch {
+      return "assets/images/404_not_found.jpg";
     }
-    return imagePath;
+  }
+
+  getProductName(product: Product) {
+    if (this.indicatorExist(product.name)) {
+      return product.name.substr(1, product.name.length);
+    }else return `${product.group} - ${product.name}`
+  }
+
+  private indicatorExist(txt: string) {
+    return txt[0] === this.withoutGroupNameIndicator;
   }
 }
