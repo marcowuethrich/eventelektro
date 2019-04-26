@@ -116,16 +116,4 @@ export class MainContentCardComponent implements OnInit {
       return 0;
     }
   }
-
-  getTotalKategories() {
-    return this.categories.length - 1;
-  }
-
-  getTotalGroups() {
-    if (this.selectedCategory === this.DROPDOWN_PLACEHOLDER) {
-      return Array.from(new Set(this.products.map(prod => prod.group))).length;
-    }
-    return this.groups.length - 1;
-  }
-
 }

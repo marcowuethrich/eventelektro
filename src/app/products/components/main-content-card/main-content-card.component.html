@@ -25,13 +25,13 @@
             <a>Beschränke deine Suche:</a>
           </div>
           <div class="row">
-            <a>Anzahl Produkte: {{getTotalSearchResults()}}</a>
+            <a>Gefundene Produkte: {{getTotalSearchResults()}}</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 filter-txt">
         <div class="">
-          <a class="filter-txt-right">Kategorie: {{getTotalKategories()}}</a>
+          <a class="filter-txt-right">Kategorie:</a>
           <div class="select-wrapper">
             <select div="product-select" (change)="onCategoryFilterSelect($event.target.value)">
 
@@ -44,7 +44,7 @@
       </div>
       <div class="col-md-4 filter-txt">
         <div class="">
-          <a class="filter-txt-right">Gruppe: {{getTotalGroups()}}</a>
+          <a class="filter-txt-right">Gruppe:</a>
           <div class="select-wrapper">
             <select div="product-select" (change)="onGroupFilterSelect($event.target.value)">
               <option *ngFor="let group of groups">

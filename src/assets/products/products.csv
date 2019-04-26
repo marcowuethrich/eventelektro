@@ -104,19 +104,25 @@ ID;Artikel;hl;Kategorie;hl2;Gruppe;Code;Anzahl;Mietpreis;BilderPath;PdfPath
 103;58W;07;Licht;10;FL Nassleuchte;07-10-103;22;5;nassleuchte.png;
 104;58W;07;Licht;11;FL Trockenleuchte;07-11-104;1;4;nassleuchte.png;
 105;12W Laufzeit 1h;07;Licht;12;Fluchtwegleuchten;07-12-105;4;10;notleuchte.jpg;
-106;MPA M.I.L.L.Y. 600W aktiv Set mit Sub & 2 Top;02;Audio;34;Soundsytem;02-34-106;1;0;pa.jpg;
-107;@MPA M.I.L.L.Y. Subwoofer aktiv;02;Audio;35;Boxen;02-35-107;2;0;pa.jpg;
-108;@MPA M.I.L.L.Y. Speaker passive;02;Audio;35;Boxen;02-35-108;1;0;pa.jpg;
-109;@Behringer Eurolive B1520 Pro 800W Speaker 2Weg passive;02;Audio;35;Boxen;02-35-109;2;0;pa.jpg;
-110;@PorkoLab Speaker 3Weg passive;02;Audio;35;Boxen;02-35-110;2;0;pa.jpg;
-111;@PorkoLab Subwoofer passive;02;Audio;35;Boxen;02-35-111;4;0;pa.jpg;
-112;@dbx Messmic;02;Audio;09;Audio Equipment;02-09-112;2;0;audio_eq.jpg;powersoft_digam.pdf
-113;@dbx DriveRack PA+;02;Audio;09;Audio Equipment;02-09-113;1;0;audio_eq.jpg;powersoft_digam.pdf
-114;@YAMAHA P5000s;02;Audio;09;Audio Equipment;02-09-114;1;0;audio_eq.jpg;powersoft_digam.pdf
-115;@Powersoft Digam 3000;02;Audio;09;Audio Equipment;02-09-115;1;0;audio_eq.jpg;powersoft_digam.pdf
-116;@Powersoft Digam 5000;02;Audio;09;Audio Equipment;02-09-116;1;0;audio_eq.jpg;powersoft_digam.pdf
-117;@Powersoft Digam 7000;02;Audio;09;Audio Equipment;02-09-117;1;0;audio_eq.jpg;powersoft_digam.pdf
-118;@Behringer Ultradrive Pro;02;Audio;09;Audio Equipment;02-09-118;1;0;audio_eq.jpg;powersoft_digam.pdf
-119;@Behringer Compressor Pro;02;Audio;09;Audio Equipment;02-09-119;1;0;audio_eq.jpg;powersoft_digam.pdf
-120;@Europower EP 2500;02;Audio;09;Audio Equipment;02-09-120;1;0;audio_eq.jpg;powersoft_digam.pdf
-121;@Behringer Eurolive 1800x  Pro 1600W Subwoofer passive;02;Audio;35;Boxen;02-35-121;2;0;pa.jpg;powersoft_digam.pdf
+106;MPA M.I.L.L.Y. 600W aktiv Set mit Subwoofer& 2 Speaker;02;Audio;34;Soundsytem;02-34-106;1;40;mpa_milly_set.jpg;
+107;@MPA M.I.L.L.Y. Subwoofer aktiv;02;Audio;35;Boxen;02-35-107;4;15;mpa_milly_subwoofer.jpg;
+108;@MPA M.I.L.L.Y. Speaker passive;02;Audio;35;Boxen;02-35-108;2;10;mpa_milly_speaker.jpg;
+109;@Behringer Eurolive B1520 Pro 800W Speaker 2Weg passive;02;Audio;35;Boxen;02-35-109;2;40;behringer_eurolive_b1520_pro.jpg;behringer_eurolive.pdf
+110;@PorkoLab Audio Speaker 3Weg passive 2 db 600/1200W 4 Ohm;02;Audio;35;Boxen;02-35-110;2;100;porkolab_3weg_top.jpg;
+111;@PorkoLab Audio Subwoofer passive;02;Audio;35;Boxen;02-35-111;4;100;pa.jpg;
+112;@dbx RTA Messmikrofon;02;Audio;09;Audio Equipment;02-09-112;2;12;dbx_messmic.jpg;dbx_messmic.pdf
+113;@dbx DriveRack PA+;02;Audio;09;Audio Equipment;02-09-113;1;45;dbx_driverack.jpg;dbx_driverack.pdf
+114;@YAMAHA P5000s;02;Audio;09;Audio Equipment;02-09-114;1;130;yamaha_p5000s.jpg;yamaha_p5000s.pdf
+115;@Powersoft Digam 3000;02;Audio;09;Audio Equipment;02-09-115;1;100;dbx_messmic.jpg;powersoft_digam.pdf
+116;@Powersoft Digam 5000;02;Audio;09;Audio Equipment;02-09-116;1;120;powersoft_digam.jpg;powersoft_digam.pdf
+117;@Powersoft Digam 7000;02;Audio;09;Audio Equipment;02-09-117;1;150;powersoft_digam.jpg;powersoft_digam.pdf
+118;@Behringer Ultradrive Pro;02;Audio;09;Audio Equipment;02-09-118;1;35;behringer_ultradrive_pro.jpg;behringer_ultradrive_pro.pdf
+119;@Behringer Composer Pro;02;Audio;09;Audio Equipment;02-09-119;1;15;behringer_composer_pro.jpg;behringer_compressor_pro.pdf
+120;@Behringer Europower EP 2500;02;Audio;09;Audio Equipment;02-09-120;1;35;behringer_europower_ep2500.jpg;behringer_europower_ep2500.pdf
+121;@Behringer Eurolive B1800x  Pro 1600W Subwoofer passive;02;Audio;35;Boxen;02-35-121;2;40;behringer_eurolive_b1800x_pro.jpg;behringer_eurolive.pdf
+122;@PorkoLab Audio Soundsystem Set 2 Speaker, 4 Subwoofer und Audiorack;02;Audio;34;Soundsytem;02-34-122;1;1000;pa.jpg;
+123;@Behringer Eurolive Soundsystem Set 2 Speaker B1520, 2 Subwoofer B1800x und Audiorack;02;Audio;34;Soundsytem;02-34-123;1;250;pa.jpg;
+124;@Pioneer CDJ 900;02;Audio;50;DJ Equipment;02-50-124;2;100;pioneer_cdj_900.jpg;
+125;@Pioneer DJM 800;02;Audio;50;DJ Equipment;02-50-125;1;50;pioneer_djm_800.png;
+126;@Pioneer DJM 500;02;Audio;50;DJ Equipment;02-50-126;1;50;pioneer_djm_500.jpg;
+127;@Pioneer CDJ 500;02;Audio;50;DJ Equipment;02-50-127;2;50;pioneer_djm_500.jpg;
