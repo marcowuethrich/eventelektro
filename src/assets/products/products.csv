@@ -110,7 +110,7 @@ ID;Artikel;hl;Kategorie;hl2;Gruppe;Code;Anzahl;Mietpreis;BilderPath;PdfPath
 109;@Behringer Eurolive B1520 Pro 800W Speaker 2Weg passive;02;Audio;35;Boxen;02-35-109;2;40;behringer_eurolive_b1520_pro.jpg;behringer_eurolive.pdf
 110;@PorkoLab Audio Speaker 3Weg passive 2 db 600/1200W 4 Ohm;02;Audio;35;Boxen;02-35-110;2;100;porkolab_3weg_top.jpg;
 111;@PorkoLab Audio Subwoofer passive;02;Audio;35;Boxen;02-35-111;4;100;pa.jpg;
-112;@dbx RTA Messmikrofon;02;Audio;09;Audio Equipment;02-09-112;2;12;dbx_messmic.jpg;dbx_messmic.pdf
+112;@dbx RTA Messmikrofon;02;Audio;09;Audio Equipment;02-09-112;2;12;dbx_messmic.jpg;
 113;@dbx DriveRack PA+;02;Audio;09;Audio Equipment;02-09-113;1;45;dbx_driverack.jpg;dbx_driverack.pdf
 114;@YAMAHA P5000s;02;Audio;09;Audio Equipment;02-09-114;1;130;yamaha_p5000s.jpg;yamaha_p5000s.pdf
 115;@Powersoft Digam 3000;02;Audio;09;Audio Equipment;02-09-115;1;100;dbx_messmic.jpg;powersoft_digam.pdf
@@ -125,4 +125,4 @@ ID;Artikel;hl;Kategorie;hl2;Gruppe;Code;Anzahl;Mietpreis;BilderPath;PdfPath
 124;@Pioneer CDJ 900;02;Audio;50;DJ Equipment;02-50-124;2;100;pioneer_cdj_900.jpg;
 125;@Pioneer DJM 800;02;Audio;50;DJ Equipment;02-50-125;1;50;pioneer_djm_800.png;
 126;@Pioneer DJM 500;02;Audio;50;DJ Equipment;02-50-126;1;50;pioneer_djm_500.jpg;
-127;@Pioneer CDJ 500;02;Audio;50;DJ Equipment;02-50-127;2;50;pioneer_djm_500.jpg;
+127;@Pioneer CDJ 500;02;Audio;50;DJ Equipment;02-50-127;2;50;pioneer_cdj_500.png;

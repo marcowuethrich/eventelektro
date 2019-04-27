@@ -12,8 +12,6 @@ export class ImagesComponent implements OnInit {
   imageNames = [
     "IMG_3325-min.JPG",
     "IMG_3328-min.JPG",
-    "IMG_3367-min.JPG",
-    "IMG_3368-min.JPG",
     "IMG_3369-min.JPG",
     "IMG_3376-min.JPG",
     "IMG_3377-min.JPG",
@@ -35,7 +33,7 @@ export class ImagesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.initGallery(this.imageNames)
+  //  this.initGallery(this.imageNames)
   }
 
   initGallery(names) {
